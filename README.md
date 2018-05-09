@@ -9,7 +9,7 @@ Start the exporter by simply executing
 	./ironport_exporter
 
 It will by default look for a configuration file called **config.yml**. This file contains authentication credentials only.
-You can use the one supplied in this repository or make your own,, as long as the format is the same If you want to change the location of the config file, do
+You can use the one supplied in this repository or make your own, as long as the format is the same If you want to change the location of the config file, do
 
 	./ironport_exporter --config.file config2.yml
 
