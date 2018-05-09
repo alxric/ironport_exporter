@@ -1,4 +1,4 @@
-# ironport Exporter
+# Ironport Exporter
 
 Ironport Exporter is a Prometheus exporter used to gather metrics from Cisco IronPort systems
 
