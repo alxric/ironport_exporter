@@ -1,0 +1,56 @@
+- name: "Test CPU Utlization"
+  type: gauge
+  xml: |
+    <status build="phoebe 10.0.1-102" hostname="mail.example.com" timestamp="20180509101053">
+      <gauges>
+        <gauge name="cpu_utilization" current="14" />
+      </gauges>
+    </status>
+  expected_error: null
+  expected_output: 14
+- name: "Test log available Gigabytes"
+  type: gauge
+  xml: |
+    <status build="phoebe 10.0.1-102" hostname="mail.example.com" timestamp="20180509101053">
+      <gauges>
+        <gauge name="log_available" current="144G" />
+      </gauges>
+    </status>
+  expected_error: null
+  expected_output: 154618822656
+
+- name: "Test log available Megabytes"
+  type: gauge
+  xml: |
+    <status build="phoebe 10.0.1-102" hostname="mail.example.com" timestamp="20180509101053">
+      <gauges>
+        <gauge name="log_available" current="34M" />
+      </gauges>
+    </status>
+  expected_error: null
+  expected_output: 35651584
+
+- name: "Test log available Kilobytes"
+  type: gauge
+  xml: |
+    <status build="phoebe 10.0.1-102" hostname="mail.example.com" timestamp="20180509101053">
+      <gauges>
+        <gauge name="log_available" current="379323K" />
+      </gauges>
+    </status>
+  expected_error: null
+  expected_output: 388426752
+
+- name: "Test inj msgs"
+  type: counter
+  xml: |
+    <status build="phoebe 10.0.1-102" hostname="mail.example.com" timestamp="20180509101053">
+      <counters>
+        <counter name="inj_msgs"
+          reset="52594944"
+          uptime="26498504"
+          lifetime="64458844" />
+      </counters>
+    </status>
+  expected_error: null
+  expected_output: 64458844
